@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.min.css">
+    <title>Отзыв</title>
+</head>
+<body>
+    <header class="header">
+    	<div class="container">
+    		<nav class="header-nav">
+    			<a href="#" class="header-nav__item active">Главная</a>
+    			<a href="#" class="header-nav__item">Фото и видео</a>
+    			<a href="#" class="header-nav__item header-nav__logo"><img src="img/logo.png" alt=""></a>
+    			<a href="#" class="header-nav__item">Карта штата</a>
+    			<a href="#" class="header-nav__item">Гостиницы</a>
+    		</nav>
+    		
+    		<nav class="mobile-header">
+    			<a href="#" class="mobile-header__logo header-nav__logo"><img src="img/logo.png" alt=""></a>
+    			<div class="mobile-header__btn">
+    				<span></span>
+    				<span></span>
+    				<span></span>
+    				<span></span>
+    			</div>
+    			<div class="mobile-header__dropdown">
+    				<button class="mobile-header__close" type="button" title="Закрыть">Закрыть</button>
+    				<a class="mobile-header__link" href="#">Главная</a>
+    				<a class="mobile-header__link"  href="#">Фото и видео</a>
+    				<a class="mobile-header__link" href="#">Карта штата</a>
+    				<a class="mobile-header__link" href="#">Гостиницы</a>
+    			</div>
+    		</nav>
+    	</div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="wrap-mountains__img main-mountains--logo">
+            	<img class="sedona-img" src="img/sedona.png" alt="">
+            </div>
+            <div class="content-review-wrapper">
+                <form class="profile-form" action="#" method="get">
+                  <div class="review-discription center">
+                      <p class="center-tittle">Оставьте свой отзыв</p>
+                      <p class="center-subtittle">Помогите нашим отелям стать лучше! оставьте отзыв о них, <br>а также о посещенных вами достопримечательностях</p>
+                  </div>
+                  <div class="profile">
+                    <div class="profile__assessment">
+                      <p class="caption">Ваше общее впечатление</p>
+                      <label>
+                        <input type="radio" name="assessment">
+                        <p class="list-item-tittle">Скорее положительное</p>
+                      </label>
+                      <label>
+                        <input type="radio" name="assessment">
+                        <p class="list-item-tittle">Скорее отрицательное</p>
+                      </label>
+                      <label>
+                        <input type="radio" name="assessment">
+                        <p class="list-item-tittle">Затрудняюсь ответить</p>
+                      </label>
+                    </div>
+                    <div class="profile__blank">
+                      <p class="caption">Представьтесь, пожалуйста</p>
+                      <label>
+                        <p>Имя</p>
+                        <input class="profile__blank_input" type="text">
+                      </label>
+                      <label>
+                        <p>Фамилия</p>
+                        <input  class="profile__blank_input" type="text">
+                      </label>
+                      <label>
+                        <p>Отчество</p>
+                        <input class="profile__blank_input" type="text">
+                      </label>
+                    </div>
+                  </div>
+                  <div class="contacts">
+                      <div class="review-maintittle">
+                        <p class="caption">Контактная информация</p>
+                      </div>
+                      <div class="contacts__items">
+                        <label class="phone">
+                         <p>Телефон</p>
+                         <input class="contacts__input" type="text"> 
+                       </label>
+                       <label class="email">
+                         <p>Электронная почта</p>
+                         <input class="contacts__input" type="text"> 
+                       </label>
+                     </div>
+                   </div>
+                  <div class="attractions-check">
+                     <div class="review-maintittle">
+                      <p class="caption">Посещенные <br>достопримечательности</p>
+                    </div>
+                    <div class="attractions-check__item">
+                      <label>
+                       <input type="checkbox">
+                       <p class="attractions-tittle">Мост Дьявола</p>
+                     </label>
+                     <label>
+                       <input type="checkbox">
+                       <p class="attractions-tittle">Гора-колокол</p>
+                     </label>
+                     <label>
+                       <input type="checkbox">
+                       <p class="attractions-tittle">Слайд-парк</p>
+                     </label>
+                     <label>
+                       <input type="checkbox">
+                       <p class="attractions-tittle">Красные горы</p>
+                     </label>
+                   </div>
+                  </div>
+                  <div class="review-detailed">
+                  	<div class="review-maintittle">
+                  		<p class="caption">Опишите свои эмоции:</p>
+                  	</div>
+                  	<label>
+                  		<textarea placeholder="Опишите подробно все свои восторги"></textarea>
+                  	</label>
+                  	<div class="submit-btn">
+                  		<input class="submit__btn" type="submit" value="Отправить форму">
+                  		<p>* — обязательные поля</p>
+                  	</div>
+                  </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrap">
+            	<div class="footer__hashtag">
+            		<a class="caption" href="#">#visitSEDONA</a> 
+            	</div>
+            	<div class="social">
+            		<a class="social__btn tw" href="#">twitter</a>
+            		<a class="social__btn fb" href="#">facebook</a>
+            		<a class="social__btn yt" href="#">youtube</a>
+            	</div>
+            	<div class="footer-copyright">
+            		<a href="https://www.instagram.com/angela.zhur/" target="_blank">made by Angela</a>
+            	</div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/vendors.min.js"></script>
+    <script src="js/script.min.js"></script>
+</body>
+</html>

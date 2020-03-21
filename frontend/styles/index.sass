@@ -1,0 +1,1114 @@
+@import '_libs.sass';
+@import '_fonts.sass'
+@import '_variables.sass';
+
+
+body
+  font-family: $font-stack
+  color: $primary-color
+  font-size: $main-fz
+  font-weight: 400
+  text-transform: uppercase
+  line-height: 26px
+  text-align: center
+  background: #f2f2f2
+
+.container
+ width: 1200px
+ margin: 0 auto
+ background: #fff
+ height: 100%
+ box-shadow: 0 0 5px rgba(0,0,0,0.1)
+
+.header-nav
+	height: 56px
+	padding: 0 70px
+	@include space
+	flex-direction: row
+
+.header-nav__item
+	text-decoration: none
+	padding: 18px 0
+	font-weight: $main-fw
+	color: $primary-color
+
+.header-nav__item:hover        //добавить смену цвета при нажатии
+	color: $blue-color	
+
+.header-nav__logo
+	padding: 0
+	z-index: 1
+
+.mobile-header
+	padding: 0 30px
+	display: flex
+	flex-direction: row
+	justify-content: center
+	align-items: center
+	display: none
+
+.mobile-header__logo
+	display: flex
+	justify-content: center
+	flex-grow: 1
+	margin-left: 40px
+
+.mobile-header__btn
+	display: flex
+	justify-content: right
+	width: 23px
+	height: 21px
+	position: relative
+	cursor: pointer
+
+.mobile-header__btn span 
+	display: block
+	position: absolute
+	height: 4px
+	width: 100%
+	background: $blue-color
+	opacity: 1
+	left: 0
+	transform: rotate(0deg)
+	transition: .25s ease-in-out
+
+
+.mobile-header__btn span:nth-child(1) 
+	top: 0px
+
+
+.mobile-header__btn span:nth-child(2), .mobile-header__btn span:nth-child(3) 
+	top: 8px
+
+.mobile-header__btn span:nth-child(4) 
+	top: 16px
+
+
+.mobile-header__dropdown
+	position: absolute
+	width: 100%
+	top: 70px
+	background-color: $blue-color
+	z-index: 1
+	overflow: hidden
+	display: none
+
+.menu-open
+	display: flex
+	flex-direction: column
+
+
+.mobile-header__link
+	text-decoration: none
+	color: #fff
+	font-size: 18px
+	line-height: 56px
+	font-weight: $main-fw
+	height: 56px
+	border: 1px solid #678fa8
+	vertical-align: middle
+
+.mobile-header__close
+	position: absolute
+	top: 14px
+	right: 20px
+	width: 22px
+	height: 22px
+	font-size: 0
+	background-color: transparent
+	border: 0
+	cursor: pointer
+
+.mobile-header__close:before, .mobile-header__close:after
+	content: ''
+	position: absolute
+	width: 30px
+	height: 5px
+
+	background-color: #fff
+	border-radius: 1px
+	right: 2px
+
+.mobile-header__close:before 
+	transform: rotate(45deg)
+
+.mobile-header__close:after 
+	transform: rotate(-45deg)
+
+.header a:active
+	color: #cacaca
+
+// .mobile-header__btn:hover + .mobile-header__dropdown 	
+// 	display: flex
+
+.main-mountains__img
+	min-height: 505px
+	width: 100%
+
+.wrap-mountains__img
+	min-height: 300px	
+	
+.main-mountains--logo
+	background-image: url("../img/background.png")
+	vertical-align: middle
+	display: flex
+	flex-direction: column
+	justify-content: space-around
+	position: relative
+	background-size: cover
+
+.main-mountains--logo img	
+	align-self: center
+
+.main-mountains--logo::after
+	content: ""
+	position: absolute
+	width: 100%
+	height: 57px
+	bottom: 0
+	background: url("../img/logobottom.png")
+	background-size: contain
+	background-repeat: no-repeat
+	background-position: 0 100%
+
+.preview__discription
+	display: flex
+	align-items: center
+	flex-direction: column
+	padding-top: 30px
+	min-height: 176px
+	width: 50%
+	margin: 0 auto	
+
+// .preview__discription
+//     width: 600px
+//     margin: 55px auto
+
+.caption
+    font-weight: $main-fw
+    font-size: 21px
+    line-height: 26px
+    color: #000
+
+.index-grids
+	display: flex
+	flex-wrap: wrap    
+
+.index-grid__item
+	width: 33.333%
+	height: 256px
+
+.index-grid__item--pic
+	width: 66.666%
+	padding: 0   
+
+.index-grid__item--pic img
+	display: flex
+
+.blue
+	background: $blue-color
+	color: #fff
+
+.index-grid__item--wrap
+	display: flex
+	align-items: center
+	flex-direction: column
+	height: 100%
+	width: 70%
+	margin: 0 auto
+	margin-top: 30px
+
+.subtittle
+	font-size: 21px
+	line-height: 21px
+	font-weight: $main-fw
+
+.index-grid__number
+	position: relative
+
+.index-grid__number:before
+	position: absolute
+	content: '– №'
+	width: 30px
+	height: 12px
+	top: 0
+	left: -28px
+
+.index-grid__number:after
+	position: absolute
+	content: '–'
+	width: 30px
+	height: 12px
+	top: 0
+	left: 0
+
+.gray
+	background: #eeeeee		
+
+.big-tittle
+	font-size: 30px
+	line-height: 26px
+	font-weight: $main-fw
+
+.user-search__main
+	padding: 40px 0
+
+.btn
+	display: block
+	width: 500px
+	height: 40px
+	padding-top: 20px
+	text-decoration: none
+	margin: 30px auto
+	align-items: center
+	text-decoration: none
+	color: #fff
+	background: #81b3d2
+
+.btn:active
+	color: #85b0cd
+	background-color: #5496bd
+
+.btn:hover
+	background: $blue-btn-hover
+
+.footer__wrap
+	min-height: 120px
+	display: flex
+	justify-content: space-around
+	align-items: center
+
+.footer__wrap a
+	color: $primary-color
+	text-decoration: none
+
+.social__btn
+	display: inline-block
+	width: 46px
+	height: 48px
+	text-decoration: none
+	font-size: 0
+	background: $blue-color url("../img/sprite.png") no-repeat center
+
+.social__btn:hover
+	background: $blue-btn-hover	url("../img/sprite.png")
+
+.tw, .tw:hover
+	background-position: -84px -13px	
+
+.fb, .fb:hover
+	background-position: -12px -15px
+
+.yt, .yt:hover
+	background-position: -165px -13px
+
+.social__btn:active
+	opacity: 0.3
+	background-color: #5496bd
+
+.active
+	color: $active-color
+
+.active:hover
+	color: #604e43	
+
+input:hover
+	background-color: #e5e5e5
+
+input:focus
+	background-color: transparent
+	border: 2px solid #e5e5e5
+
+.popup-form
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100vh
+    background: rgba(0, 0, 0, 0.55)
+    display: flex
+    align-items: center
+    justify-content: center	
+    display: none
+
+.modal-popup
+	width: 576px
+	height: calc(100vh - 40px)
+	margin: 0 auto
+	background: #fff
+	font-size: $main-fz
+	overflow: auto
+	position: relative
+
+.modal-popup__wrap .btn
+	width: 70%
+
+.modal_content_close 
+	position: absolute
+	top: 10px
+	right: 10px
+	width: 22px
+	height: 22px
+	font-size: 0
+	background-color: transparent
+	border: 0
+	cursor: pointer
+
+.modal_content_close:before, .modal_content_close:after
+	content: ''
+	position: absolute
+	width: 19px
+	height: 3px
+
+	background-color: #d0d0d0
+	border-radius: 1px
+	right: 2px
+
+.modal_content_close:before 
+	transform: rotate(45deg)
+
+.modal_content_close:after
+	transform: rotate(-45deg)
+
+
+.modal-popup__heading
+	height: 76px
+	color: #fff
+	background: #766357
+	padding-top: 10px
+
+input[type="date"]
+	width: 60%
+	height: 38px
+	background: #f2f2f2
+	border: none
+	font-weight: $main-fw
+	font-size: $main-fz
+	line-height: 26px
+	font-family: 'PT Sans', sans-serif
+	text-transform: uppercase
+	outline: none
+	position: relative
+
+input[type="date"]::-webkit-inner-spin-button
+	display: none
+
+input[type="date"]:after
+	content: ""
+	position: absolute
+	top: 8px
+	right: 12px
+	width: 22px
+	height: 22px
+	background-image: url("../img/calendar.png")
+	background-repeat: no-repeat
+
+.modal-popup__wrap
+	font-weight: $main-fw
+
+input[type="number"]
+	margin-left: 10px
+	height: 38px
+	text-align: center
+	background: #f2f2f2
+	border: none
+	font-weight: $main-fw
+	font-size: $main-fz
+	line-height: 26px
+	font-family: 'PT Sans', sans-serif
+	text-transform: uppercase
+	outline: none
+
+input[type="number"]::-webkit-inner-spin-button
+	display: none
+
+.count
+	position: relative
+
+.adult--minus
+	display: block
+	position: absolute
+	left: 80px
+	bottom: 0
+	width: 40px
+	height: 40px
+	cursor: pointer
+	background: transparent
+
+.adult--minus:before
+	content: ""
+	position: absolute
+	top: 16px
+	right: 8px
+	width: 20px
+	height: 4px
+	background: #a9a9a9
+
+.adult--plus
+	display: block
+	position: absolute
+	left: 186px
+	bottom: 0
+	width: 40px
+	height: 40px
+	cursor: pointer
+	background: transparent
+
+.adult--plus:before, .adult--plus:after
+	content: ""
+	position: absolute
+	top: 16px
+	right: 8px
+	width: 20px
+	height: 4px
+	background: #a9a9a9
+
+.adult--plus:after
+	transform: rotate(90deg)
+
+.children--minus
+	display: block
+	position: absolute
+	right: 110px
+	bottom: 0
+	width: 40px
+	height: 40px
+
+.children--minus:before
+	content: ""
+	position: absolute
+	top: 16px
+	right: 8px
+	width: 20px
+	height: 4px
+	background: #a9a9a9
+
+.children--plus
+	display: block
+	position: absolute
+	right: 0
+	bottom: 0
+	width: 40px
+	height: 40px
+	cursor: pointer
+	background: transparent
+
+.children--plus:before, .children--plus:after
+	content: ""
+	position: absolute
+	top: 16px
+	right: 8px
+	width: 20px
+	height: 4px
+	background: #a9a9a9
+
+.children--plus:after
+	transform: rotate(90deg)
+
+.modal-popup__form
+	width: 80%
+	margin: 40px auto
+
+.datelabel, .countlabel
+	@include space
+	margin-top: 34px
+
+.count
+	display: flex
+	justify-content: space-between
+
+.modal-show 
+	display: flex
+	animation: bounce 0.6s
+
+.modal-error
+	animation: shake 0.6s
+
+.content-wrapper
+	margin: 0 auto
+	width: calc(100% - 150px)
+
+.content-review-wrapper
+	margin: 0 auto
+	width: calc(100% - 240px)
+
+.benefits 
+	background: url("../img/backgroundblur.png")
+	padding: 30px 0
+
+.benefits .content-wrapper
+	@include space
+
+.benefits__tittle
+	color: #fff
+	font-size: 16px
+	line-height: 21px
+	font-weight: $main-fw
+
+.benefits-checkbox
+	width: 35%
+	@include space
+
+.benefits-checkbox__infrostr label, .benefits-checkbox__houses label
+	display: block
+	margin-bottom: 20px
+	text-align: left
+
+.hotels-subtittle
+	position: relative
+	cursor: pointer
+	color: #fff
+	line-height: 21px
+	padding-left: 40px
+
+.benefits-checkbox__infrostr input
+	position: relative
+	display: none
+
+.benefits-checkbox__infrostr label input + .hotels-subtittle:before
+	content: ''
+	position: absolute
+	display: block
+	top: 0
+	left: 0
+	width: 18px
+	height: 18px
+	background: transparent
+	border: 2px solid #fff
+	border-radius: 4px
+
+.benefits-checkbox__infrostr label input:checked + .hotels-subtittle:before
+	content: ''
+	background-image: url("../img/check.png")
+	background-position: -2px -2px
+
+.benefits-checkbox__houses input
+	position: relative
+	display: none
+
+.benefits-checkbox__houses label input + .hotels-subtittle:before
+	content: ''
+	position: absolute
+	display: block
+	top: 0
+	left: 0
+	width: 18px
+	height: 18px
+	background: transparent
+	border: 2px solid #fff
+	border-radius: 4px
+
+.benefits-checkbox__houses label input:checked + .hotels-subtittle:before
+	content: ''
+	background-image: url("../img/check.png")
+	background-position: -2px -2px
+
+.benefits__slider
+	width: 30%
+	text-align: start
+
+.benefits__slider table
+	width: 319px
+	height: 32px
+	border: 2px solid #fff
+	border-collapse: collapse
+
+.benefits__slider table td
+	width: 50%
+	border: 2px solid #fff
+
+.slider
+	width: 100%
+
+.irs--big .irs-line
+	height: 2px
+	background: #938482
+	border: none
+
+.irs--big .irs-max, .irs--big .irs-min
+	display: none
+
+.irs--big .irs-from, .irs--big .irs-single, .irs--big .irs-to
+	display: none
+
+.irs--big .irs-bar
+	height: 2px
+	background: #fff
+	border: none
+
+.irs--big .irs-handle
+	width: 20px
+	height: 20px
+	border: none
+	background: #fff
+
+.benefits__btn
+	text-decoration: none
+	padding: 8px
+	margin: 20px 80px 0
+	border: 2px solid #fff
+	display: flex
+	justify-content: center
+
+.benefits__btn:hover
+	color: $primary-color
+	background-color: #fff
+
+.search .content-wrapper
+	display: flex
+	flex-direction: row
+	align-items: center
+	justify-content: space-between
+
+.search .caption
+	display: block
+	width: 135px
+
+.searchform
+	@include space
+	padding: 30px 0
+
+.breadcrumbs
+	font-size: 12px
+	line-height: 18px
+	display: flex
+	flex-direction: row
+	align-items: center
+
+.breadcrumbs p	
+	margin-left: 30px
+
+.breadcrumbs--tittle
+	color: $primary-color
+
+.breadcrumbs--active
+	color: $blue-color	
+
+.breadcrumbs--text
+	border-bottom: 1px dotted $blue-color
+	color: #cacaca
+
+.breadcrumbs--text:hover
+	color: $blue-color
+	cursor: pointer
+
+.search__arrows
+	@include space
+	width: 30px
+	align-items: center
+
+.arrow-up 
+  width: 0 
+  height: 0
+  border-left: 5px solid transparent
+  border-right: 5px solid transparent
+  border-bottom: 10px solid #cccccc
+
+
+.arrow-down
+  width: 0
+  height: 0
+  border-left: 5px solid transparent
+  border-right: 5px solid transparent
+  border-top: 10px solid $blue-color
+
+.arrow-up:hover
+ 	border-bottom: 10px solid $primary-color
+	
+.arrow-down:hover
+ 	border-top: 10px solid $primary-color
+
+.search-item .content-wrapper
+	@include space
+	padding: 32px 0
+
+.search-item
+	border-top: 1px solid #e5e5e5
+	border-bottom: 1px solid #e5e5e5
+
+.search-item__discription	
+	width: 40%
+	@include space
+
+.search-item--about-hotel
+	@include space
+	line-height: 21px
+
+.search-item__discription_text p
+	margin-top: 0
+	margin-bottom: 10px
+	text-align: start	
+
+.search-item .caption:hover
+	color: $blue-color
+	cursor: pointer	
+
+.search-item__raiting
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	align-items: flex-end
+
+.search-item__hotel
+	margin-right: 8px	
+
+.search-items__more, .search-items__booking-btn
+	text-decoration: none
+	color: #fff
+	padding: 8px 15px
+	font-weight: $main-fw
+	background: $blue-color
+
+.search-items__more:hover
+	background: #669ec0
+
+.search-items__booking-btn
+	background: #766357
+
+.search-items__booking-btn:hover
+	background: #604e43
+
+.search-item__img
+	display: flex
+
+.raiting-btn
+	width: 110px
+	height: 24px
+	border: none
+	background: #f2f2f2
+	line-height: 21px
+
+.search-item__raiting_stars
+	display: flex
+
+.center
+	width: 70%
+	margin: 100px auto 50px
+
+.center-tittle
+	font-size: 30px
+	font-weight: $main-fw
+	color: #000
+
+.center-subtittle
+	line-height: 24px
+
+.profile
+	@include space	
+
+.profile__assessment
+	text-align: center
+	width: 44%
+
+.profile__assessment label
+	display: flex
+	flex-direction: start
+	margin-bottom: 22px
+
+.list-item-tittle
+	padding-left: 80px
+	font-size: 18px
+	font-weight: $main-fw
+	text-transform: none
+	cursor: pointer
+	position: relative
+
+.profile__assessment input
+	position: relative
+	display: none
+
+.profile__assessment label input + .list-item-tittle:before
+	content: ''
+	display: block
+	position: absolute
+	top: -10px
+	left: 0
+	width: 55px
+	height: 55px
+	background: #f2f2f2
+	border-radius: 50%
+
+.profile__assessment label input + .list-item-tittle:after 
+	content: ''
+	display: block
+	position: absolute
+	background: #000000
+	width: 22px
+	height: 22px
+	top: 6px
+	left: 17px
+	border-radius: 50%
+	opacity: 0
+
+.profile__assessment label input:hover + .list-item-tittle:before
+	background-color: #e5e5e5
+
+.profile__assessment label input:checked + .list-item-tittle:after
+	opacity: 1	
+
+.profile .caption
+	margin-bottom: 64px	
+
+.profile__blank
+	width: 40%
+
+.profile__blank label
+	display: flex
+	flex-direction: start
+	margin-bottom: 32px
+
+.profile__blank_input
+	box-sizing: border-box
+	height: 60px
+	background: #f2f2f2
+	border: none
+	margin-left: 18px
+	padding-left: 20px
+	width: 100%
+	outline: none
+	font-size: 18px
+	line-height: 26
+	font-weight: $main-fw
+
+.contacts
+	margin: 50px 0
+
+.contacts__items
+	@include space
+
+.contacts__items label
+	display: flex
+	flex-direction: row
+	align-items: center
+	position: relative
+
+
+.contacts__input
+	width: 320px
+	box-sizing: border-box
+	margin-left: 16px
+	height: 60px
+	background: #f2f2f2
+	border: none
+	outline: none
+	padding-left: 20px
+	padding-right: 70px
+	font-size: 18px
+	line-height: 26
+	font-weight: $main-fw
+
+.contacts__items label:after
+	content: ''
+	display: block
+	position: absolute
+	top: 0
+	right: 0
+	width: 60px
+	height: 60px
+	background-color: #e6e6e6
+	background-repeat: no-repeat
+	background-position: center
+	background-size: auto
+	
+.phone:after
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAMAAABhEH5lAAAAKlBMVEUAAAABAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQF6R+clAAAADXRSTlMAECAwUHCAj5+/z9/vDGwdCwAAAF9JREFUeNqNzkkOACEIAEEUV5T/f3eQhCCepo8VQWCz1OCOT/MX7UBTDW/q+irfVI4ghJaJ15hfSospim4brw2z7B+TWALAzTRaVUpihCKaz7KKE5TFlt9SDcM1fZ75D0dEBXuhJPe3AAAAAElFTkSuQmCC)
+
+.email:after
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAMCAMAAABcOc2zAAAAGFBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABWNxwqAAAAB3RSTlMAQFBgv9/voR5H6AAAAEJJREFUeNqFjjEOACAIA08Q+f+PlaiJymAH0hYK0PxCwx9Q6ilrgbBOaQpiIU1AjUE0yKzu7N6eY6VF1qZ09m+k1zur+wRZWfvIuAAAAABJRU5ErkJggg==)
+
+.contacts__items
+	margin: 70px 0
+
+.attractions-check__item
+	display: flex
+	justify-content: space-between
+	margin: 70px 0
+
+
+.attractions-check__item label
+	display: flex
+	flex-direction: row
+	align-items: center
+
+.attractions-tittle
+	font-size: 18px
+	font-weight: $main-fw
+	text-transform: none
+	cursor: pointer
+	position: relative
+	padding-left: 86px
+
+.attractions-check__item input
+	position: relative
+	display: none
+
+.attractions-check__item label input + .attractions-tittle:before
+	content: ''
+	position: absolute
+	display: block
+	top: -20px
+	left: 0
+	width: 58px
+	height: 58px
+	background-color: #f2f2f2
+	border: 2px solid #fff
+	border-radius: 4px
+
+.attractions-check__item label input:hover + .attractions-tittle:before
+	background-color: #e5e5e5
+
+.attractions-check__item label input:checked + .attractions-tittle:before
+	content: ''
+	background-image: url("../img/tick.png") 
+	background-repeat: no-repeat
+	background-position: 18px 22px
+
+.review-detailed textarea
+	resize: none
+	background-color: #f2f2f2
+	width: 100%
+	height: 160px
+	border: none
+	outline: none
+	font-size: 18px
+	line-height: 26px
+	font-weight: $main-fw
+	padding-left: 20px
+	padding-top: 10px
+
+.submit-btn
+	@include space
+	margin-top: 60px	
+
+.submit-btn input
+	font-size: 21px
+	line-height: 26px
+	font-weight: $main-fw
+	color: #fff
+	height: 60px
+	width: 50%
+	background-color: $blue-color
+	outline: none
+
+.submit-btn input:hover
+	background-color: #669ec0
+	cursor: pointer
+
+.submit-btn input:active
+	color: #85b0cd
+	background-color: #5496bd
+
+.review-maintittle
+    display: block
+    text-align: center
+    overflow: hidden
+    white-space: nowrap
+
+.review-maintittle p
+    position: relative
+    display: inline-block
+
+.review-maintittle p:before,
+.review-maintittle p:after 
+    content: ""
+    position: absolute
+    top: 50%
+    width: 9999px
+    height: 1px
+    background: #dbdbdb
+
+
+.review-maintittle p:before 
+    right: 100%
+    margin-right: 15px
+
+
+.review-maintittle p:after 
+    left: 100%
+    margin-left: 15px
+
+.gallery
+	display: flex
+	flex-wrap: wrap
+
+.firstpic
+	height: 400px
+	background-image: url("../img/galleryfirst.png")
+
+.gallery__item
+	width: 100%
+	display: flex
+	align-items: flex-end
+	color: #fff
+
+.smallpic
+	height: 268px
+	background-repeat: no-repeat
+
+.little1	
+	background-image: url("../img/small1.png")
+
+.little2	
+	background-image: url("../img/small2.png")
+
+.little3
+	background-image: url("../img/small3.png")		
+
+.gallery__discription
+	width: 100%
+	height: 30%
+	@include space
+	align-items: center
+
+.gallery__discription p
+	margin: 0
+	text-align: start
+
+.gallery__discription
+	background-image: url("../img/gallery-background.png")
+
+.gallery__discription--gray
+	display: none
+	background: #f2f2f2
+	height: 80px
+		
+
+.gallery-mainfont
+	line-height: 24px
+	font-weight: $main-fw
+
+.gallery-picauthor
+	line-height: 24px
+	text-transform: none
+
+.gallery__discription_likes
+	position: relative
+	padding-right: 30px
+
+.gallery__discription_likes:before
+	content: ''
+	position: absolute
+	top: 0
+	left: -30px
+	width: 22px
+	height: 20px
+	background-image: url("../img/like.png")
+
+.gallery__discription--gray .gallery__discription_likes:before
+	background-image: url("../img/likegray.png")
+
+.gallery-wrapper
+	width: 33.333%
+
+.gallery__discription_name
+	padding-left: 30px
+
+.video
+	padding-bottom: 80px
+	width: 800px
+	height: 500px
+	margin: 0 auto
+
+
+// !!! media.sass should be the last
+@import '_media.sass'
